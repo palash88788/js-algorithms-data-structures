@@ -4,15 +4,38 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
 // method 1
-// function reverseString(text){
+// function reverseString(text) {
 //     return text.split('').reverse().join('');
 // }
+
+// function reversestrng(text) {
+
+//     return text.reverse();
+// }
+
+// function splitstr(text) {
+//     return text.split("")
+// }
+
+// function reverse(splitstr) {
+//     return splitstr.reverse()
+// }
+
+// function joinreversestr(reverse) {
+//     return reverse.join("");
+// }
+
+function reverseString(text) {
+    return text.spolit("").reverse().join("")
+}
 
 
 // method 2
 // function reverseString(text){
 //     return [...text].reverse().join('');
 // }
+
+
 
 // method 3
 // function reverseString(text){
@@ -44,7 +67,7 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 // }
 
 // method 6
-function reverseString(text){
+function reverseString(text) {
     return text.split('').reduce((acc, currentValue) => currentValue + acc, '');
 }
 
