@@ -4,48 +4,32 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 */
 
 // method 1
+
 // function reverseString(text) {
-//     return text.split('').reverse().join('');
+//     return text.split("").reverse().join("");
 // }
-
-// function reversestrng(text) {
-
-//     return text.reverse();
-// }
-
-// function splitstr(text) {
-//     return text.split("")
-// }
-
-// function reverse(splitstr) {
-//     return splitstr.reverse()
-// }
-
-// function joinreversestr(reverse) {
-//     return reverse.join("");
-// }
-
-function reverseString(text) {
-    return text.spolit("").reverse().join("")
-}
 
 
 // method 2
-// function reverseString(text){
-//     return [...text].reverse().join('');
+
+function reverseString(text) {
+    return [...text].reverse().join('');
+
+}
+// function reverseString(text) {
+//     return [...text].reverse().join("")
 // }
-
-
 
 // method 3
-// function reverseString(text){
-//     let result = '';
-//     for(let i = text.length -1; i>=0; i--){
-//         result += text[i];
-//     }
-//     return result;
-// }
+function reverseString(text) {
+    let result = ""
 
+    for (let i = text.length - 1; i >= 0; i--) {
+        result += text[i];
+
+    }
+    return result
+}
 
 // method 4
 // function reverseString(text){
@@ -66,9 +50,20 @@ function reverseString(text) {
 //     }
 // }
 
-// method 6
+
 function reverseString(text) {
-    return text.split('').reduce((acc, currentValue) => currentValue + acc, '');
+    if (text === "") {
+        return ""
+    } else {
+        return reverseString(text.substr(1)) + text[0]
+
+    }
 }
+
+// method 6
+// function reverseString(text) {
+//     return text.split('').reduce((acc, currentValue) => currentValue + acc, '');
+// }
+
 
 module.exports = reverseString
